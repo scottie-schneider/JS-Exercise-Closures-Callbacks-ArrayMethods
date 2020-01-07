@@ -186,10 +186,16 @@ function processDuplicateFree(list, callback) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
+function getFullNames(runners) {
   /* CODE HERE */
+  return formatRunners(runners)
 }
 
+let formatRunners = (runners) => {
+  let array = [];
+  runners.forEach((runner) => array.push(`${runner.last_name}, ${runner.first_name}`))
+  return array;
+}
 /**
  * ### Challenge `firstNamesAllCaps`
  * 
